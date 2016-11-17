@@ -1,0 +1,40 @@
+<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?>
+	<div class="footer">
+	<div class="container">
+		<div class="col-md-3 cust">
+			<h4>客户问题</h4>
+				<li><a href="javascript:void(0)">帮助中心</a></li>
+				<li><a href="javascript:void(0)">疑问FAQ</a></li>
+				<li><a href="javascript:void(0)">如何购物</a></li>
+				<li><a href="javascript:void(0)">投递</a></li>
+		</div>
+		<div class="col-md-2 abt">
+			<h4>关于我们</h4>
+				<li><a href="javascript:void(0)">我们的故事</a></li>
+				<li><a href="javascript:void(0)">出版</a></li>
+				<li><a href="javascript:void(0)">职业</a></li>
+				<li><a href="contact.html">联系</a></li>
+		</div>
+		<div class="col-md-2 myac">
+			<h4>我的账户</h4>
+				<li><a href="<?php echo U('Member/Reg/index');?>">注册</a></li>
+				<li><a href="<?php echo U('Member/Cart/index');?>">我的购物车</a></li>
+				<li><a href="javascript:void(0)">浏览历史</a></li>
+				<li><a href="javascript:void(0)">付款</a></li>
+		</div>
+		<div class="col-md-5 our-st">
+			<div class="our-left">
+				<h4>联系方式</h4>
+			</div>
+			<div class="clearfix"> </div>
+				<li><i class="add"> </i>广东省广东邮电职业技术学院</li>
+				<li><i class="phone"> </i>18924244166</li>
+				<li><a href="javascript:void(0)"><i class="mail"> </i>1030697048@qq.com </a></li>
+			
+		</div>
+		<div class="clearfix"> </div>
+			<p>本网站仅用于参加本团队比赛使用  &copy; 最终解析权归本团队所有</p>
+	</div>
+</div>
+	</body>
+</html>

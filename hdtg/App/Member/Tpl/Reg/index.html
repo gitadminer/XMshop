@@ -1,0 +1,196 @@
+	<load file="./Public/tpl/header.html"/>
+	<link href="__PUBLIC__/css/logincheck.css" rel="stylesheet" type='text/css' />
+	<script src="__PUBLIC__/js/loginCheck1.js"></script>
+	<script src="__ROOT__/Public/js/regCheck.js"></script>
+	<script>
+		var __JSCONTROL__ = '__CONTROL__';
+	</script>
+	<!-- 载入公共头部文件-->
+	<div class="container">
+<div class="main">
+	<!-- start registration -->
+	<div class="registration">
+		<div class="registration_left">
+		<h2>新用户? <span> 创建账号 </span></h2>
+		<!-- [if IE] 
+		    < link rel='stylesheet' type='text/css' href='ie.css'/>  
+		 [endif] -->  
+		  
+		<!-- [if lt IE 7]>  
+		    < link rel='stylesheet' type='text/css' href='ie6.css'/>  
+		<! [endif] -->  
+		<script>
+			(function() {
+		
+			// Create input element for testing
+			var inputs = document.createElement('input');
+			
+			// Create the supports object
+			var supports = {};
+			
+			supports.autofocus   = 'autofocus' in inputs;
+			supports.required    = 'required' in inputs;
+			supports.placeholder = 'placeholder' in inputs;
+		
+			// Fallback for autofocus attribute
+			if(!supports.autofocus) {
+				
+			}
+			
+			// Fallback for required attribute
+			if(!supports.required) {
+				
+			}
+		
+			// Fallback for placeholder attribute
+			if(!supports.placeholder) {
+				
+			}
+			
+			// Change text inside send button on submit
+			var send = document.getElementById('register-submit');
+			if(send) {
+				send.onclick = function () {
+					this.innerHTML = '...Sending';
+				}
+			}
+		
+		})();
+		</script>
+		 <div class="registration_form">
+		 <!-- Form -->
+		<div id="regBox">
+		<div class='form'>
+		<form action="{|U('Member/Reg/adduser')}" method="post" id="regForm">
+			<dl>
+				<dt></dt>
+				<dd class='text'><input class='must' type="text"  ajax=1   name="username" placeholder="账户名称:" /></dd>
+				<dd class='prompt'></dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd class='text'><input class='must' id="password" type="password" name="password" placeholder="密码:" /></dd>
+				<dd class='prompt'></dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd class='text'><input class='must' type="password" id="password_d" name="password_d" placeholder="重复密码:" /></dd>
+				<dd class='prompt'></dd>
+			</dl>
+			<dl class='focus'>
+				<dt></dt>
+				<dd class='text'><input class='must' type="text" ajax=1   name="email" placeholder="账户邮箱:"/></dd>
+				<dd class='prompt'>用于登录和找回密码，不会公开</dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd class='text'><input class='must' type="text" ajax=1   name="phone" placeholder="账号电话号码:"/></dd>
+				<dd class='prompt'></dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd class='text'>
+					<select name="school_name" id="">
+						<option value="">学校地址</option>
+						<foreach from="$school" key="$k" value="$v" >
+						<option value="{$v.school_name}">{$v.school_name}</option>
+						</foreach>
+					</select>
+				</dd>
+				<dd class='prompt'></dd>
+			</dl>
+			<dl>
+				<dt>宿舍地址：(必填)</dt>
+				<dd class="select_room">
+					<select name="user_floor" id="" >
+						<option value="">幢</option>
+						<option value="128">128</option>
+						<option value="210">210</option>
+						<option value="211">211</option>
+						<option value="212">212</option>
+						<option value="213">213</option>
+						<option value="214">214</option>
+						<option value="215">215</option>
+						<option value="217">217</option>
+					</select>
+					<select name="user_level" id="" >
+						<option value="">层</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+					</select>
+					<select name="user_room" id="" >
+						<option value="">房号</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+					</select>
+				</dd>
+			</dl>
+		
+	
+	<div class="sky-form">
+		<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>我同意shoppe.com &nbsp;<a class="terms" href="#"> 服务条例</a> </label>
+	</div>
+	<dl>
+			<dt></dt>
+			<dd class='submit'><input type="submit" value="注册"></dd>
+	</dl>
+	</form>
+		</div>
+	
+	</div>
+	<!-- /Form -->
+		</div>
+	</div>
+	<div class="registration_left">
+		<h2>已有用户</h2>
+		<div>
+		 <div class="registration_form" id="logincheck1">
+		 <!-- Form -->
+			<form id="registration_form" action="{|U('Member/Login/login')}" method="post">
+				<div>
+				<dl>
+					<dt></dt>
+					<dd class='text'><input class='must' type="text" url="{|U('Member/Login/loginCheck')}" ajax=2   name="username1" placeholder="账户名称:" /></dd>
+					<dd class='prompt'></dd>
+				</dl>
+				</div>
+				<div>
+					<dl>
+						<dt></dt>
+						<dd class='text'><input class='must' type="password" url="{|U('Member/Login/loginCheck')}" ajax=2   name="password1" placeholder="密码:" /></dd>
+						<dd class='prompt'></dd>
+					</dl>
+				</div>						
+				<div>
+					<input type="submit" class = "submit" value="确定" id="register-submit">
+				</div>
+				<div class="forget">
+					<a href="#">忘记密码</a>
+				</div>
+			</form>
+			<!-- /Form -->
+			</div>
+			</div>
+	</div>
+	<div class="clearfix"></div>
+	</div>
+	<!-- end registration -->
+</div>
+</div>
+	<load file="./Public/tpl/footer.html"/>
+	<!-- 载入公共头部文件-->
+</body>
+
+</html>

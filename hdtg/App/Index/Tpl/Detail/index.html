@@ -1,0 +1,99 @@
+	<load file="./Public/tpl/header.html"/>
+<!-- 载入公共头部文件结束 -->
+	<link href="__PUBLIC__/css/etalage.css" type="text/css" rel="stylesheet" >
+	<link href="__PUBLIC__/css/detail.css" type="text/css" rel="stylesheet" >
+	<link href="__PUBLIC__/css/windon.css" type="text/css" rel="stylesheet" >
+	<script src="__PUBLIC__/js/detail.js"></script>
+	<script src="__PUBLIC__/js/jquery.etalage.min.js"></script>
+<script>
+		var cartSucc = "<div class='colse'><a href='javascript:hideInfoWindow();'></a></div>\
+			<ul class='status'>\
+			<li class='ico'></li>\
+			<li class='msg'>\
+				<h3>添加成功!</h3>\
+				<p>购物车内共有<span id='total'></span>种商品</p>\
+			</li>\
+		</ul>\
+		<div class='goBtn'>\
+			<a href='javascript:hideInfoWindow();'>继续浏览</a>\
+			<a href='{|U('Member/Cart/index')}'>查看购物车</a>\
+		</div>";
+		var collectSucc = "<div class='colse'><a href='javascript:hideInfoWindow();'></a></div>\
+			<ul class='status'>\
+			<li class='ico'></li>\
+			<li class='msg'>\
+				<h3>收藏成功!</h3>\
+			</li>\
+		</ul>\
+		<div class='goBtn'>\
+			<a href='javascript:hideInfoWindow();'>继续浏览</a>\
+			<a href='{|U('Member/Index/collect')}'>查看我的收藏</a>\
+		</div>";
+		var userIsLogin = false;
+		<if value="$userIsLogin">
+			userIsLogin = true;
+		</if>
+	</script>
+	<div class="container">
+<div class="women_main">
+	<!-- start content -->
+			<div class="row single">
+				<div class="col-md-9 det">
+				  <div class="single_left">
+					<div class="grid images_3_of_2">
+						<ul id="etalage">
+							<li>
+								<a href="optionallink.html">
+									<img class="etalage_thumb_image" src="{$goodsuserinfo.goods_img}" class="img-responsive" />
+									<img class="etalage_source_image" src="{$goodsuserinfo.goods_img}" class="img-responsive" title="" />
+								</a>
+							</li>	
+						</ul>
+						 <div class="clearfix">
+						  <span>&nbsp;商品服务：</span><br />
+          	    			<foreach from="$goodsuserinfo.serve" key="$k" value="$v">
+								<div><span class="label label-default" style="margin-left:100px;">{$v.name}</span></div><br>
+							</foreach>
+						 </div>		
+				  </div>
+				  <div class="desc1 span_3_of_2">
+				  <ul class="list-group" style="width:560px">
+  					<li class="list-group-item"><h3>{$goodsuserinfo.main_title}</h3></li>
+					  <li class="list-group-item"><span class="brand">类型: <a href="#">{$goodsuserinfo.cname} </a></span></li>
+					  <li class="list-group-item"><span class="code">{$goodsuserinfo.sub_title}</span></li>
+					  <li class="list-group-item"><span>上架时间：{$goodsuserinfo.begin_time | date:'Y-m-d',@@}</span>&nbsp;&nbsp;&nbsp;<span>下架时间：{$goodsuserinfo.end_time}</span></li>
+					  <li class="list-group-item"><p>卖家地址：{$goodsuserinfo.school_name}&nbsp;{$goodsuserinfo.user_floor}栋{$goodsuserinfo.user_level}{$goodsuserinfo.user_room}房&nbsp;&nbsp;&nbsp;卖家电话：{$goodsuserinfo.phone}</p> </li>
+					  <li class="list-group-item">
+					  <p><div class="price">
+							<span class="text">现价:</span>
+							<span class="price-new">{$goodsuserinfo.price}</span><span class="price-old">{$goodsuserinfo.old_price}</span> 
+					  </div></p></li>
+					  <li class="list-group-item">
+					  <p><div class="btn_form">
+							<a href="javascript:void(0)">购买</a>
+							</div></p></li>
+					  <li class="list-group-item">
+							<!-- <a href="javascript:void(0);"  url="{|U('Member/Cart/addCart')}/gid/{$goodsuserinfo.gid}" id="addCart" class='cart'><span>保存到购物车</span></a>-->			
+						<div class='deal-buy-cart'>
+							<a href="{|U('Member/Buy/index')}/gid/{$detail.gid}" class='buy'></a>
+							<a href="javascript:void(0);"  url="{|U('Member/Cart/add')}/gid/{$goodsuserinfo.gid}" id="addCart" class='cart'><span>保存到购物车</span></a>
+						</div>
+						</li>
+				</ul>
+			   	</div>
+          	    <div class="clearfix"></div>
+          	  </div>
+          	  <div class="single-bottom1">
+					<h6>描述</h6>
+					<p class="prod-desc">{$goodsuserinfo.detail}</p>
+			</div>
+	     </div>
+	</div>
+</div>
+</div>	
+	<div id="cover"></div>
+	<div id="infoWindow"></div>				
+	<!-- end content -->
+<!-- 载入公共头部文件开始 --> 
+	<load file="./Public/tpl/footer.html"/>
+<!-- 载入公共头部文件结束 -->

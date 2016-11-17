@@ -1,0 +1,114 @@
+@CHARSET "UTF-8";
+#regBox{
+	width:500px;
+	padding:20px 30px;
+	background:#FFF;
+}
+#regBox .form{
+	width:100%;
+	height:auto;
+	margin-top:-35px;
+}
+#regBox .form dl{
+	width:500px
+	padding:11px 0px;
+	margin-top:5px;
+}
+#regBox .form dl dd{
+	width:500px
+	float:left;
+}
+#regBox .form dl dd.text{
+	overflow:hidden;
+}
+#regBox .form dl .text input{
+	border:1px solid #cccccc;
+	font-size:14px;
+	text-indent:5px;
+	color:#000;
+}
+#regBox .form dl .text select{
+	width:300px;
+	height:35px;
+	border:1px solid #cccccc;
+	font-size:14px;
+	text-indent:5px;
+	color:#000;
+}
+#regBox .form dl .select_room select{
+	width:100px;
+	height:35px;
+	border:1px solid #cccccc;
+	font-size:14px;
+	text-indent:5px;
+	color:#000;
+}
+#regBox .form dl dd.prompt{
+	width:440px;
+	height:32px;
+	border:1px solid #a4dbfe;
+	font-size:14px;
+	padding:5px 5px 5px 30px;
+	display:none;
+	background-color:#e5f5ff;
+	background-image:url(../images/icons.png);
+	background-repeat:no-repeat;
+}
+#regBox .form dl .submit input{
+	cursor:pointer;
+	/* width:78px;
+	height:30px; */
+	font-size:14px;
+	border-radius:2px;
+	border:0;
+	background-color: #29B4A8;
+    background-image: -moz-linear-gradient(center top , #25B0A4, #2EB8AC);
+	background-image: -webkit-linear-gradient(center top , #25B0A4, #2EB8AC);
+	background-image: -o-linear-gradient(center top , #25B0A4, #2EB8AC);
+    border-color: #23A79C;
+    box-shadow: 0 1px 0 #2AC2B5 inset;
+    color: white;
+}
+#regBox .form dl .submit input:hover{
+	background-image: -moz-linear-gradient(center top , #59bfbf, #3dbebe);
+	background-image: -weikit-linear-gradient(center top , #59bfbf, #3dbebe);
+	background-image: -o-linear-gradient(center top , #59bfbf, #3dbebe);
+}
+
+/** 样式切换  **/
+/** 获得焦点 **/
+#regBox .form dl.focus{
+	background:#fdf0e3;
+}
+#regBox .form .focus .text input{
+	border:1px solid #ffa960;
+	box-shadow:0px 0px 1px #999 inset;
+}
+#regBox .form .focus dd.prompt{
+	background-position:6px -93px;
+	display:block;
+}
+/** 验证失败 **/
+#regBox .form dl.error{
+	background:none;
+}
+#regBox .form .error .text input{
+	border:1px solid #ee4d3d;;
+	box-shadow:0px 0px 3px #ee4d3d inset;
+}
+#regBox .form .error dd.prompt{
+	background-position:6px -193px;
+	background-color:#ffcece;
+	border:1px solid #ff8080;
+	display:block;
+}
+/**  验证成功 **/
+#regBox .form dl.success{
+	background:none;
+}
+#regBox .form .success dd.prompt{
+	background-position:6px 6px;
+	background-color:#FFF;
+	border:0;
+	display:block;
+}

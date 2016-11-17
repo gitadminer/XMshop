@@ -1,0 +1,31 @@
+<load file="./hdtg/App/Admin/Tpl/Common/header.html" />
+
+<div id="map">
+	<span class='title'>分类列表</span>
+</div>
+<div id="content">
+	<table id="table" style="width:600px;" class='table table-striped table-bordered'>
+		<thead>
+			<tr>
+				<th width="5%"></th>
+				<th width="35%">栏目名称</th>
+				<th width="35%"></th>
+				<th ></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+		<foreach from="$data" key="$k" value="$v">
+			<tr class="level_{$v.level} pid_{$v.pid}" cid="{$v.cid}" level="{$v.level}">
+				<td><a class='btn btn-mini btn-info unfold' style="font-size:16px;" href="">+</a></td>
+				<td>|-{$v.html}{$v.cname}</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</foreach>	
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

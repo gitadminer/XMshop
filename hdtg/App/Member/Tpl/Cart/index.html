@@ -1,0 +1,57 @@
+	<load file="./Public/tpl/header.html"/>
+	<!-- 载入公共头部文件-->
+	<link href="__PUBLIC__/css/cart.css" type="text/css" rel="stylesheet" >
+	<script src="__PUBLIC__/js/cart.js"/></script>
+	<script>
+		var __JSCONTROL__ = '__CONTROL__';
+</script>
+	<div class="container">
+	<div class="check">	 
+		 <div class="col-md-9 cart-items">
+			 <h1>我的购物车 ({$cartnum})</h1>
+			 <form action="{|U('Member/Buy/payment')}" method="post">
+			 <foreach from="{$cart}" key="$k" value="$v">
+			 <div class="cart-header"></div>
+				 <div class="close1"> </div>
+				 <div class="cart-sec simpleCart_shelfItem">
+						<div class="cart-item cyc">
+							 <img src="{$v.goods_img}" class="img-responsive" alt=""/>
+						</div>
+					   <div class="cart-item-info">
+						<h3><a href="{|U('Index/Detail/index')}/gid/{$v.gid}">{$v.main_title}</a><br><span>您的{$v.cart_id}号购物车商品</span></h3>
+						<ul class="goods-num">
+						<li><p><a href="javascript:void(0);" class='reduce reduceGoods' ></a>
+							<input class="goodsNum" name="goods_num[]" gid="{$v.gid}" url="{|U('Member/Cart/updateGoodsNum')}" type="text" value={$v.goods_num}> 
+							<a href="javascript:void(0);" class='add addGoods' ></a></p></li>
+						</ul>
+							 <div class="delivery">
+							 <p>价格：<em class="font">{$v.price}￥</em></p>
+							 <br><br>
+							 <span>下架时间：<em class="font">{$v.end_time | date:'Y-m-d',@@}</em></span>
+							 <p>商品处于的状态：<em  class="font">{$v.status}</em></p>
+							 <br><br>
+							 <p>合计：<em class="font">{$v.xiaoji}￥</em></p>
+							
+				        </div>	
+					   </div>
+					    <div class="clearfix"></div>
+					   <div class="operate">
+					   <input type="submit" class="btn btn-success btn-lg" value="购买">
+					   <a id="my-cart" url="{|U('Member/Cart/del')}/gid/{$v.gid}"   class="btn btn-danger btn-lg delCart" href="javascript:void(0);">删除</a>					 
+					   </div>
+					   <div class="clearfix"></div>
+											
+				  </div>
+				  </foreach>
+				 </form>
+			 </div>
+		 </div>
+		 
+		
+			<div class="clearfix"> </div>
+	 </div>
+	 </div>
+	 	<load file="./Public/tpl/footer.html"/>
+<!-- 载入公共头部文件结束 -->
+</body>
+</html>

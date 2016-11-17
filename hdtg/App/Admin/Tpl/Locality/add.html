@@ -1,0 +1,84 @@
+<load file="./hdtg/App/Admin/Tpl/Common/header.html" />
+<hdui/>
+<script type="text/javascript" src="__PUBLIC__/js/locality.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/new_area.js"></script>
+<style>
+	#school_area select{
+		width:15%;
+	}
+	#school_area span{
+	font-size:15px;
+	}
+</style>
+<div id="map">
+	<span class='title'>添加学校</span>
+</div>
+<div id="content">
+	<form id="localityForm" action="{|U('Admin/Locality/add')}" method="post">
+	<table class='table table-striped table-bordered'>
+		<thead>
+			<tr>
+				<th width="20%">名称</th>
+				<th style="text-align:left">值</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>学校所属地区</td>
+				<td id="school_area">
+				<span>大区:</span>	
+				<select name="region" id="s0" onchange="regionChage(0,'')">
+						<option value="0">--请选择--</option>
+						<option value="1">华北区</option>
+						<option value="24">华东区</option>
+						<option value="28">华南区</option>
+						<option value="46">华中区</option>
+						<option value="483">西南区</option>
+				</select>
+				<span>省:</span>	
+					<select name="province" id="s1" onchange="regionChage(1,'')">
+					<option>--请选择--</option></select>
+				<span>市:</span>	
+					<select name="city" id="s2"  >
+					<option>--请选择--</option></select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>学校名称</td>
+				<td>
+					<input type="text" name="school_name" />
+				</td>
+			</tr>
+			<tr>
+				<td>学校排序</td>
+				<td>
+					<input name="sort" type="text" />
+				</td>
+			</tr>
+			<tr>
+				<td>是否显示</td>
+				<td>
+					<lable>
+						<input type="radio" name="display" checked=true value="1"/>	
+						<span>显示</span>
+					</lable>
+					<lable>
+						<input type="radio" name="display" value="0"/>	
+						<span>隐藏</span>
+					</lable>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" class='btn' value="添加"/></td>
+			</tr>
+		</tbody>
+	</table>
+	</form>
+	
+	
+	
+</div>
+</body>
+</html>

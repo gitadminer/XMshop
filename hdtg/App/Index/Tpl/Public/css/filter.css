@@ -1,0 +1,163 @@
+/**
+ * 商品过滤
+ */
+#filter{
+	width:960px;
+	height:auto;
+	margin:10px auto;
+}
+#filter .hots{
+	width:958px;
+	height:33px;
+	border-top:1px solid #cbe0e3;
+	border-left:1px solid #cbe0e3;
+	border-right:1px solid #cbe0e3;
+	background:url(../images/hots_bg.png) repeat-x 0px 0px;
+}
+#filter .hots span{
+	display:block;
+	width:100px;
+	height:33px;
+	float:left;
+	line-height:33px;
+	text-align:right;
+}
+#filter .hots .box{
+	width:860px;
+	height:33px;
+	float:left;
+}
+#filter .hots .box a{
+	display:block;
+	padding:0px 3px;
+	color:#339999;
+	float:left;
+	margin:8px 5px 0px 5px;
+}
+#filter .hots .box a:hover{
+	background:#45abab;
+	color:#FFF;
+	border-radius:3px;
+	text-decoration:none;
+}
+#filter .hots .box a.active{
+	background:#45abab;
+	color:#FFF;
+	border-radius:3px;
+	text-decoration:none;
+}
+#filter .filter-box{
+	width:958px;
+	height:auto;
+	border:1px solid #d4d4d4;
+	padding:12px 0px 0px 0px;
+}
+#filter .filter-label{
+	width:928px;
+	height:auto;
+	padding:0px 15px;
+	overflow:hidden;
+}
+#filter .filter-label .filter-label-level-1{
+	width:958px;
+	height:auto;
+}
+#filter .filter-label .filter-label-level-1 span{
+	width:75px;
+	height:33px;
+	display:block;
+	text-align:right;
+	line-height:33px;
+	float:left;
+}
+#filter .category .filter-label-level-1 span b{
+	padding:3px 10px;
+	background:url(../images/sp-filter-icons.png) no-repeat -20px -14px;
+}
+#filter .locality .filter-label-level-1 span b{
+	padding:3px 10px;
+	background:url(../images/sp-filter-icons.png) no-repeat -20px -37px;
+}
+#filter .price .filter-label-level-1 span b{
+	padding:3px 10px;
+	background:url(../images/sp-filter-icons.png) no-repeat -20px -82px;
+}
+#filter .filter-label .filter-label-level-1 .box{
+	width:860px;
+	height:auto;
+	float:left;
+}
+#filter .filter-label .filter-label-level-1 .box a{
+	display:block;
+	padding:0px 3px;
+	color:#339999;
+	float:left;
+	margin:8px 5px 7px 5px;
+}
+#filter .filter-label .filter-label-level-1 .box a:hover{
+	background:#45abab;
+	color:#FFF;
+	border-radius:3px;
+	text-decoration:none;
+}
+#filter .filter-label .filter-label-level-1 .box a.active{
+	background:#45abab;
+	color:#FFF;
+	border-radius:3px;
+	text-decoration:none;
+}
+#filter .filter-label .filter-label-level-2{
+	width:860px;
+	height:auto;
+	background:#f7f7f7;
+	float:left;
+	margin-left:64px;
+	overflow:hidden;
+	_margin-left:32px;
+}
+#filter .filter-label .filter-label-level-2 a{
+	display:inline-block;
+	padding:0px 3px;
+	color:#339999;
+	margin:7px 5px 6px 5px;
+	border:1px solid #f7f7f7;
+}
+#filter .filter-label .filter-label-level-2 a:hover{
+	background:#45abab;
+	color:#FFF;
+	border-radius:3px;
+	text-decoration:none;
+}
+#filter .filter-label .filter-label-level-2 a.active{
+	background:#45abab;
+	color:#FFF;
+	border-radius:3px;
+	text-decoration:none;
+}
+#filter .screen{
+	width:100%;
+	height:37px;
+	border-top:1px solid #eeeeee;
+	background:#f7f7f7;
+}
+#filter .screen div{
+	width:390px;
+	height:19px;
+	border:1px solid #e8e8e8;
+	margin:8px 0px 0px 15px;
+}
+#filter .screen div a{
+	padding:0px 8px;
+	border-right:1px solid #e8e8e8;
+	display:inline-block;
+	height:19px;
+	background:#FFF;
+	float:left;
+}
+#filter .screen div a b{
+	padding:0px 10px;
+	background:url(../images/sp-filter-icons.png) no-repeat -60px -16px;
+}
+#filter .screen div a.active{
+	background:#eeeded;
+}

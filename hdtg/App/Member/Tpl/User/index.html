@@ -1,0 +1,32 @@
+<load file="./Public/tpl/header.html"/>
+<link rel="stylesheet" href="__PUBLIC__/css/userinfo.css" />
+	<!-- 载入公共头部文件-->
+	<table class="table table-condensed">
+	<tr>
+		<td>我的用户名：{$username.uname}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>我的邮箱:{$username.email}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>我的电话:{$username.phone}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>我的学校:{$username.school_name}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>我的宿舍地址:{$username.user_floor}栋{$username.user_level}{$username.user_room}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><a href="javascript:void(0)" class="btn btn-success">修改信息</a></td>
+	</tr>
+
+	</table>
+<load file="./Public/tpl/footer.html"/>
+	<!-- 载入尾部文件 -->

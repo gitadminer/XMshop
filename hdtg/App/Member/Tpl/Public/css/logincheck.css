@@ -1,0 +1,96 @@
+@CHARSET "UTF-8";
+#logincheck1 dl{
+	width:500px
+	padding:11px 0px;
+	margin-top:5px;
+}
+#logincheck1 dl dd{
+	width:500px
+	float:left;
+}
+#logincheck1 dl dd.text{
+	overflow:hidden;
+}
+#logincheck1 .text input{
+	border:1px solid #cccccc;
+	font-size:14px;
+	text-indent:5px;
+	color:#000;
+}
+#logincheck1 dl .text select{
+	width:300px;
+	height:35px;
+	border:1px solid #cccccc;
+	font-size:14px;
+	text-indent:5px;
+	color:#000;
+}
+#logincheck1 dl dd.prompt{
+	width:507px;
+	height:32px;
+	border:1px solid #a4dbfe;
+	font-size:14px;
+	padding:5px 5px 5px 30px;
+	display:none;
+	background-color:#e5f5ff;
+	background-image:url(../images/icons.png);
+	background-repeat:no-repeat;
+}
+#logincheck1 dl .submit input{
+	cursor:pointer;
+	/* width:78px;
+	height:30px; */
+	font-size:14px;
+	border-radius:2px;
+	border:0;
+	background-color: #29B4A8;
+    background-image: -moz-linear-gradient(center top , #25B0A4, #2EB8AC);
+	background-image: -webkit-linear-gradient(center top , #25B0A4, #2EB8AC);
+	background-image: -o-linear-gradient(center top , #25B0A4, #2EB8AC);
+    border-color: #23A79C;
+    box-shadow: 0 1px 0 #2AC2B5 inset;
+    color: white;
+}
+#logincheck1  dl .submit input:hover{
+	background-image: -moz-linear-gradient(center top , #59bfbf, #3dbebe);
+	background-image: -weikit-linear-gradient(center top , #59bfbf, #3dbebe);
+	background-image: -o-linear-gradient(center top , #59bfbf, #3dbebe);
+}
+
+/** 样式切换  **/
+/** 获得焦点 **/
+#logincheck1  dl.focus{
+	background:#fdf0e3;
+}
+#logincheck1 .focus .text input{
+	border:1px solid #ffa960;
+	box-shadow:0px 0px 1px #999 inset;
+}
+#logincheck1  .focus dd.prompt{
+	background-position:6px -93px;
+	display:block;
+}
+/** 验证失败 **/
+#logincheck1  dl.error{
+	background:none;
+}
+#logincheck1  .error .text input{
+	border:1px solid #ee4d3d;;
+	box-shadow:0px 0px 3px #ee4d3d inset;
+}
+#logincheck1 .error dd.prompt{
+	background-position:6px -193px;
+	background-color:#ffcece;
+	border:1px solid #ff8080;
+	display:block;
+}
+/**  验证成功 **/
+#logincheck1 dl.success{
+	background:none;
+}
+#logincheck1 .success dd.prompt{
+	background-position:6px 6px;
+	background-color:#FFF;
+	border:0;
+	display:block;
+}

@@ -1,0 +1,110 @@
+<load file="./Public/tpl/header.html"/>
+<script type="text/javascript" src="__PUBLIC__/js/goods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/hdui.js"></script>
+<link rel="stylesheet" href="__PUBLIC__/css/hdui.css" />
+<jqueryui/>
+<div id="map">
+	<span class='title'>添加商品</span>
+</div>
+<div id="content">
+	<form id="goodsForm" action="{|U('Member/Goods/edit')}/gid/{$goods.gid}" method="post">
+	<table class='table table-striped table-bordered'>
+		<thead>
+			<tr>
+				<th width="20%">名称</th>
+				<th>值</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>分类名称</td>
+				<td>
+					<select name="cid" >
+						<foreach from="$category" value="$v">
+							<option value="{$v.cid}">{$v.html}{$v.cname}</option>	
+						</foreach>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>商品主标题</td>
+				<td>
+					<input type="text" name="main_title" value="{$goods.main_title}"/>
+				</td>
+			</tr>
+			<tr>
+				<td>商品副标题</td>
+				<td>
+					<textarea name="sub_title">{$goods.sub_title}</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>现价</td>
+				<td>
+					<input type="text" name="price" value="{$goods.price}"/>
+				</td>
+			</tr>
+			<tr>
+				<td>原价</td>
+				<td>
+					<input type="text" name="old_price" value="{$goods.old_price}"/>
+				</td>
+			</tr>
+			<tr>
+				<td>上架时间</td>
+				<td>
+					<input id="begin_time" type="text" name="begin_time" value="{$goods.begin_time | date:'Y-m-d',@@}"/>
+				</td>
+			</tr>
+			<tr>
+				<td>下架时间</td>
+				<td>
+					<input id="end_time" type="text" name="end_time" value="{$goods.end_time | date:'Y-m-d',@@}"/>
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>商品展示图</td>
+				<td>
+					<upload size="2" type="jpg,png,gif" limit="1" name="goods_img" thumb="556,387,600,400,170,250"/>
+					原图：<img width="200" src = "__ROOT__/{$goods.goods_img}"/>
+					<input type="hidden" name="old_img" value="{$goods.goods_img}"/>
+				</td>
+			</tr>	
+			<tr>
+				<td>商品服务</td>
+				<td>
+					<foreach from="$server" key="$k" value="$v">
+						<?php if(in_array($k,$goods['goods_server'])){?>
+						<label>
+							<input type="checkbox" name="goods_server[]" checked=true value="{$k}">
+							{$v.name}
+						</label>
+						<?php }else{?>
+						<label>
+							<input type="checkbox"  name="goods_server[]" value="{$k}">
+							{$v.name}
+							<?php } ?>
+						</label>
+					</foreach>
+				</td>
+			</tr>	
+			<tr>
+				<td>商品细节展示</td>
+				<td>
+					<ueditor name='detail' content="{$goods.detail}">
+				</td>
+			</tr>	
+			<tr style="height:100px;">
+				<td></td>
+				<td><input type="submit" class='btn btn-success' value="确认修改" /></td>
+			</tr>
+		</tbody>
+	</table>
+	</form>
+	
+	
+	
+</div>
+<load file="./Public/tpl/footer.html"/>

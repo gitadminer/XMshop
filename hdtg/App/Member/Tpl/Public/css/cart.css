@@ -1,0 +1,39 @@
+.goods-num a{
+	display:inline-block;
+	width:14px;
+	height:13px;
+	float:left;
+	margin-top:8px;
+}
+.goods-num a.reduce{
+	background:url(../images/sp-icon.png) no-repeat -12px -60px;
+	margin-right:5px;	
+}
+.goods-num a.add{
+	background:url(../images/sp-icon.png) no-repeat -51px -60px;
+	margin-left:5px;	
+}
+.goods-num a.reduce:hover{
+	background:url(../images/sp-icon.png) no-repeat -25px -60px;
+}
+.goods-num a.add:hover{
+	background:url(../images/sp-icon.png) no-repeat -64px -60px;
+}
+.goods-num input{
+	width:50px;
+	height:30px;
+	border:1px solid #999;
+	float:left;
+	text-align:center;
+}
+.operate{
+	position:relative;
+	margin-top:20px;
+	float:right;
+}
+.operate input{
+	magin-left:50px;
+}
+.font{
+	color:red;
+}
