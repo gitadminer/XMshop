@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>欢迎来到校园二手商品拍卖后台</title>
-<script type='text/javascript' src='http://a615268.sn20908.gzonet.net/hdphp/Extend/Org/Jquery/jquery-1.8.2.min.js'></script>
-<link href="http://a615268.sn20908.gzonet.net/hdphp/Extend/Org/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"><script src="http://a615268.sn20908.gzonet.net/hdphp/Extend/Org/bootstrap/js/bootstrap.min.js"></script>
+<script type='text/javascript' src='http://localhost/XMshop/hdphp/Extend/Org/Jquery/jquery-1.8.2.min.js'></script>
+<link href="http://localhost/XMshop/hdphp/Extend/Org/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"><script src="http://localhost/XMshop/hdphp/Extend/Org/bootstrap/js/bootstrap.min.js"></script>
   <!--[if lte IE 6]>
-  <link rel="stylesheet" type="text/css" href="http://a615268.sn20908.gzonet.net/hdphp/Extend/Org/bootstrap/ie6/css/bootstrap-ie6.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost/XMshop/hdphp/Extend/Org/bootstrap/ie6/css/bootstrap-ie6.css">
   <![endif]-->
   <!--[if lte IE 7]>
-  <link rel="stylesheet" type="text/css" href="http://a615268.sn20908.gzonet.net/hdphp/Extend/Org/bootstrap/ie6/css/ie.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost/XMshop/hdphp/Extend/Org/bootstrap/ie6/css/ie.css">
   <![endif]-->
 <style>
 body{background:#d0dee3;}

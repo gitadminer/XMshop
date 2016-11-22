@@ -2,30 +2,30 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type='text/javascript' src="http://a615268.sn20908.gzonet.net/Public/js/jquery-1.11.1.min.js"></script>
-<link href="http://a615268.sn20908.gzonet.net/Public/css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="http://a615268.sn20908.gzonet.net/Public/css/style.css" rel='stylesheet' type='text/css' />
-<link href="http://a615268.sn20908.gzonet.net/Public/css/register.css" rel="stylesheet" type='text/css' />
-<link href="http://a615268.sn20908.gzonet.net/Public/css/reset.css" rel='stylesheet' type='text/css' />
+<script type='text/javascript' src="http://localhost/XMshop/Public/js/jquery-1.11.1.min.js"></script>
+<link href="http://localhost/XMshop/Public/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="http://localhost/XMshop/Public/css/style.css" rel='stylesheet' type='text/css' />
+<link href="http://localhost/XMshop/Public/css/register.css" rel="stylesheet" type='text/css' />
+<link href="http://localhost/XMshop/Public/css/reset.css" rel='stylesheet' type='text/css' />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.useso.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
 <!-- start menu -->
-<link rel="icon" href="http://a615268.sn20908.gzonet.net/Public/images/favicon.png" mce_href="http://a615268.sn20908.gzonet.net/Public/images/favicon.png" type="image/x-icon">
-<link href="http://a615268.sn20908.gzonet.net/Public/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="http://a615268.sn20908.gzonet.net/Public/js/megamenu.js"></script>
+<link rel="icon" href="http://localhost/XMshop/Public/images/favicon.png" mce_href="http://localhost/XMshop/Public/images/favicon.png" type="image/x-icon">
+<link href="http://localhost/XMshop/Public/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="http://localhost/XMshop/Public/js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
-<script src="http://a615268.sn20908.gzonet.net/Public/js/menu_jquery.js"></script>
-<script src="http://a615268.sn20908.gzonet.net/Public/js/simpleCart.min.js"> </script>
-<script src="http://a615268.sn20908.gzonet.net/Public/js/Login.js"></script>
-<script src="http://a615268.sn20908.gzonet.net/Public/js/bootstrap.min.js"></script>
-<script src="http://a615268.sn20908.gzonet.net/Public /js/loginCheck.js"></script>
+<script src="http://localhost/XMshop/Public/js/menu_jquery.js"></script>
+<script src="http://localhost/XMshop/Public/js/simpleCart.min.js"> </script>
+<script src="http://localhost/XMshop/Public/js/Login.js"></script>
+<script src="http://localhost/XMshop/Public/js/bootstrap.min.js"></script>
+<script src="http://localhost/XMshop/Public /js/loginCheck.js"></script>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <title><?php echo $title;?></title>
 <style>
 .search input[type="submit"]{
-	background: url('http://a615268.sn20908.gzonet.net/Public/images/search.png') no-repeat 0px 1px;
+	background: url('http://localhost/XMshop/Public/images/search.png') no-repeat 0px 1px;
 	border: none;
 	cursor: pointer;
 	width: 24px;
@@ -39,7 +39,7 @@ i.phone {
   width: 19px;
   height: 21px;
   display: inline-block;
-  background: url(http://a615268.sn20908.gzonet.net/Public/images/img-sprite.png) no-repeat -235px -39px;
+  background: url(http://localhost/XMshop/Public/images/img-sprite.png) no-repeat -235px -39px;
   vertical-align: middle;
   margin-right: 0.5em;
 }
@@ -47,7 +47,7 @@ i.add {
   width: 17px;
   height: 24px;
   display: inline-block;
-  background: url(http://a615268.sn20908.gzonet.net/Public/images/img-sprite.png) no-repeat -236px -11px;
+  background: url(http://localhost/XMshop/Public/images/img-sprite.png) no-repeat -236px -11px;
   vertical-align: middle;
   margin-right: 0.5em;
 }
@@ -55,7 +55,7 @@ i.mail {
   width: 17px;
   height: 14px;
   display: inline-block;
-  background: url(http://a615268.sn20908.gzonet.net/Public/images/img-sprite.png) no-repeat -236px -76px;
+  background: url(http://localhost/XMshop/Public/images/img-sprite.png) no-repeat -236px -76px;
   margin-right: 0.5em;
 }
 #main{
@@ -119,7 +119,7 @@ i.mail {
 	<div class="header">
 	<div class="head-t">
 		<div class="logo">
-			<a href="<?php echo U('Index/Index/index');?>"><img src="http://a615268.sn20908.gzonet.net/Public/images/logo.png" class="img-responsive" alt=""/> </a>
+			<a href="<?php echo U('Index/Index/index');?>"><img src="http://localhost/XMshop/Public/images/logo.png" class="img-responsive" alt=""/> </a>
 		</div>
 		<!-- start header_right -->
 		<div class="header_right">
@@ -176,7 +176,7 @@ i.mail {
 			<?php }?>	
 			<div class="cart box_1">
 				<a href="<?php echo U('Member/Cart/index');?>">
-					<h3> <span class="btn btn-default">我的购物车</span><img src="http://a615268.sn20908.gzonet.net/Public/images/bag.png" alt=""></h3>
+					<h3> <span class="btn btn-default">我的购物车</span><img src="http://localhost/XMshop/Public/images/bag.png" alt=""></h3>
 				</a>	
 				<p><a href="javascript:;" class="simpleCart_empty"></a></p>
 				<div class="clearfix"> </div>
